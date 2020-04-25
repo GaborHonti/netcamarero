@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
 
 </head>
 <body>
@@ -80,7 +80,8 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
-                <a href="/restaurants">Ver todos los restaurantes</a>
+                <a href="/restaurants">Ver todos los restaurantes</a> <br>
+                <a href="/crudmenu">CRUD management</a>
             </div>
             <div class="col-12 col-md-6">
 
