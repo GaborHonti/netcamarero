@@ -243,10 +243,20 @@ button {
   border-radius: 0;
 }
 
+
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
+.contenedorAll{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    /* The image used */
+    background-image: url("../img/vegetalesTable.jpg");
+    min-height: 660px;
+    padding-top: 3%;
+
 
 input,
 button,
