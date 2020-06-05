@@ -54,7 +54,7 @@ class LikeHistoryController extends Controller
 
         $restaurant->update(array('likes' => $numLikes));
 
-        return new LikeHistoryResource($crear);
+        return "Exito";
         } else{
             return "ya esta liked";
         }
