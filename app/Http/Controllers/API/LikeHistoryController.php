@@ -46,16 +46,16 @@ class LikeHistoryController extends Controller
 
         $likeado = intval($like['restaurant']);
 
-        $restaurant = Restaurant::where('id' , intval($like['restaurant']))->first();
+        $restaurant = Restaurant::where('name' , $like['name'])->first();
 
-        return $restaurant;
-        /*$numLikes = $likeado;
+
+        $numLikes = $likeado;
 
         $numLikes++;
 
         $restaurant->update(array('likes' => $numLikes));
 
-        return "Exito";*/
+        return "Exito";
         } else{
             return "ya esta liked";
         }
