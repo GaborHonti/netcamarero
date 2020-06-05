@@ -49,7 +49,7 @@ class LikeHistoryController extends Controller
         $restaurant = Restaurant::where('name' , $like['name'])->first();
 
 
-        $numLikes = $likeado;
+        $numLikes = intval($restaurant['likes']);
 
         $numLikes++;
 
