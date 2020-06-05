@@ -44,9 +44,11 @@ class LikeHistoryController extends Controller
 
         $crear = LikeHistory::create($like,true);
 
-        $restaurant = Restaurant::where('id' , $like['restaurant'])->first();
+        $likeado = intval($like['restaurant']);
 
-        $numLikes = $restaurant['likes'];
+        $restaurant = Restaurant::where('id' , $likeado)->first();
+
+        $numLikes = $likeado;
 
         $numLikes++;
 
@@ -106,6 +108,9 @@ class LikeHistoryController extends Controller
     public function esLiked($idUser , $idRest){
         //Desarrollar lógica para si hay like o no
         $respuesta = 0; //----> respuesta por defecto, no hay like, devuelve un 0
+
+        $idUser = intval($idUser);
+        $idRest = intval($idRest);
 
         $restaurant = LikeHistory::where('user' , $idUser)->where('restaurant' , $idRest)->first();
 
