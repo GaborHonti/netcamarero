@@ -109,7 +109,7 @@ class LikeHistoryController extends Controller
 
         $restaurant = LikeHistory::where('user' , $idUser)->where('restaurant' , $idRest)->first();
 
-        if($restaurant['user'] != null){
+        if(is_object($restaurant) != null){
             $respuesta = 1; // ----> si es liked
         }
 

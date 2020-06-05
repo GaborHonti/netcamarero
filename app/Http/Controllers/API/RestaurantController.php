@@ -69,6 +69,9 @@ class RestaurantController extends Controller
         $city = City::where('name',$restaurante['city'])->get();
         $restaurante['city'] = $city[0]->id;
         */
+
+        //comprobar existencia de imagen, si no existe moverlo a otra carpeta la imagen por defecto y hacerle copia
+
         $restaurante['photo'] = 'restaurantimgs/' . $restaurante['photo'];
         $crear = Restaurant::create($restaurante,true);
 
@@ -80,7 +83,9 @@ class RestaurantController extends Controller
     public function getLocalidades($criterio){
         //obtenemos localidad con en nombre introducido
 
-            $localidad = City::where('name',$criterio)->first();
+            //City::where('name',$criterio)->first();
+
+            $localidad = City::whereRaw("UPPER(name) LIKE '%'". strtoupper($criterio)."'%'")->first();
 
             if($localidad['id'] != null){
                 $restaurantes = Restaurant::where('city',$localidad['id'])->get();
