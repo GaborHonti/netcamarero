@@ -46,7 +46,7 @@ class LikeHistoryController extends Controller
 
         $likeado = intval($like['restaurant']);
 
-        $restaurant = Restaurant::where('id' , $likeado)->first();
+        $restaurant = Restaurant::where('id' , intval($like['restaurant'])->first();
 
         $numLikes = $likeado;
 
@@ -112,7 +112,7 @@ class LikeHistoryController extends Controller
         $idUser = intval($idUser);
         $idRest = intval($idRest);
 
-        $restaurant = LikeHistory::where('user' , $idUser)->where('restaurant' , $idRest)->first();
+        $restaurant = LikeHistory::where('user' , intval($idUser))->where('restaurant' , intval($idRest))->first();
 
         if(is_object($restaurant) != null){
             $respuesta = 1; // ----> si es liked
