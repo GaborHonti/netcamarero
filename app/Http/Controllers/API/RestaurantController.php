@@ -71,8 +71,12 @@ class RestaurantController extends Controller
         */
 
         //comprobar existencia de imagen, si no existe moverlo a otra carpeta la imagen por defecto y hacerle copia
+        if($restaurante['photo'] != null){
+            $restaurante['photo'] = 'restaurantimgs/' . $restaurante['photo'];
+        } else{
+            $restaurante['photo'] = 'defectPhotos/defecto1.jpg';
+        }
 
-        $restaurante['photo'] = 'restaurantimgs/' . $restaurante['photo'];
         $crear = Restaurant::create($restaurante,true);
 
         return new RestaurantResource($crear);
