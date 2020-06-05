@@ -83,9 +83,10 @@ class RestaurantController extends Controller
     public function getLocalidades($criterio){
         //obtenemos localidad con en nombre introducido
 
-            //City::where('name',$criterio)->first();
+            //
+            //City::whereRaw("UPPER(name) LIKE '%'". strtoupper($criterio)."'%'")->first();
 
-            $localidad = City::whereRaw("UPPER(name) LIKE '%'". strtoupper($criterio)."'%'")->first();
+            $localidad = City::where('name',$criterio)->first();
 
             if($localidad['id'] != null){
                 $restaurantes = Restaurant::where('city',$localidad['id'])->get();
