@@ -16,11 +16,9 @@ class FileController extends Controller
 
 
     public function upload(Request $request){
-        //$imageName = $request->image->getClientOriginalName() /*. '.' . $request->image->getClientOriginalExtension()*/;
-        //$request->image->move(public_path('restaurantimgs'), $imageName);
+        $imageName = $request->image->getClientOriginalName() /*. '.' . $request->image->getClientOriginalExtension()*/;
+        $request->image->move(public_path('restaurantimgs'), $imageName);
 
-        //return response()->json(['success'=>'¡Éxito!']);
-
-        return $request;
+    	return response()->json(['success'=>'¡Éxito!']);
     }
 }
