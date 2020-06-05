@@ -160,9 +160,9 @@ class RestaurantController extends Controller
         //Desarrollar lógica para si hay fav o no
         $respuesta = 0; //----> respuesta por defecto, no hay fav, devuelve un 0
 
-        $restaurant = Fav::where('user' , $idUser)->where('restaurant' , $idRest)->first();
+        $favorito = Fav::where('user' , $idUser)->where('restaurant' , $idRest)->first();
 
-        if($restaurant['user'] != null){
+        if(is_object($favorito)){
             $respuesta = 1; // ----> si es fav
         }
 
