@@ -42,7 +42,7 @@ class LikeHistoryController extends Controller
 
         if($this->esLiked($like['user'], $like['restaurant']) == 0){
 
-        $crear = LikeHistory::create($like,true);
+        //$crear = LikeHistory::create($like,true);
 
         $likeado = intval($like['restaurant']);
 
