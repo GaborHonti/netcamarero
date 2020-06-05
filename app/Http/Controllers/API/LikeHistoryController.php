@@ -52,7 +52,7 @@ class LikeHistoryController extends Controller
 
         $numLikes++;
 
-        $restaurant->update(array('likes' => $numLikes));
+        //$restaurant->update(array('likes' => $numLikes));
 
         return "Exito";
         } else{
