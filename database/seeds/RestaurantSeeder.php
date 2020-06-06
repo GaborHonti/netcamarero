@@ -20,6 +20,8 @@ class RestaurantSeeder extends Seeder
             'likes' => 0,
             'phonenumber' => 693746840,
             'description' => 'soy el primer restaurante de esta pagina',
+            'latitud' => 37.976483,
+            'longitud' =>  -0.793203,
         ]);
     }
 }
