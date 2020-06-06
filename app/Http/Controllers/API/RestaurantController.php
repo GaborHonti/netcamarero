@@ -77,11 +77,10 @@ class RestaurantController extends Controller
             $restaurante['photo'] = 'defectPhotos/defecto1.jpg';
         }
 
-        //$crear = Restaurant::create($restaurante,true);
+        $crear = Restaurant::create($restaurante,true);
 
-        //return new RestaurantResource($crear);
+        return new RestaurantResource($crear);
 
-        return $restaurante;
     }
 
     //LÓGICAS PARA BUSCAR SEGÚN: >>>>> localidad >>>> categoria >>>> nombre
