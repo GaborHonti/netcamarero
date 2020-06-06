@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cities')->insert([
+        DB::table('users')->insert([
             'name' => 'Admin user',
             'email' => 'admin@admin.com',
             'password' => 'admin',
