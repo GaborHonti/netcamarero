@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('welcome.blade.php');
 });
 /*
 Route::get('/crudmenu', function () {
