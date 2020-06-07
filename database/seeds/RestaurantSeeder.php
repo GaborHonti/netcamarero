@@ -103,5 +103,18 @@ class RestaurantSeeder extends Seeder
             'latitud' => 38.027877,
             'longitud' => -0.745852,
         ]);
+
+        DB::table('restaurants')->insert([
+            'name' => 'Friends',
+            'photo' => 'restaurantimgs/pocoloco.jpg',
+            'city' => 3,
+            'category' => 3,
+            'likes' => 0,
+            'phonenumber' => 654789321,
+            'description' => 'Restaurante Mexicano en Campoamor, con eventos en vivo, organización de cumpleaños y un ambiente muy tradicional y
+            acogedor. Siente como si estarías en México con nosotros!',
+            'latitud' => 37.913372,
+            'longitud' => -0.739294,
+        ]);
     }
 }

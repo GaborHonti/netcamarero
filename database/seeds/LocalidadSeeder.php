@@ -19,5 +19,9 @@ class LocalidadSeeder extends Seeder
         DB::table('cities')->insert([
             'name' => 'Los Montesinos'
         ]);
+
+        DB::table('cities')->insert([
+            'name' => 'Campoamor'
+        ]);
     }
 }
