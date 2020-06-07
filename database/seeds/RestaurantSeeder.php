@@ -105,7 +105,7 @@ class RestaurantSeeder extends Seeder
         ]);
 
         DB::table('restaurants')->insert([
-            'name' => 'Friends',
+            'name' => 'Poco Loco',
             'photo' => 'restaurantimgs/pocoloco.jpg',
             'city' => 3,
             'category' => 3,
