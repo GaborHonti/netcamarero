@@ -27,5 +27,9 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'Pub Español'
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Pizzería'
+        ]);
     }
 }

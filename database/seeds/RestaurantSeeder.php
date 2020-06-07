@@ -65,5 +65,31 @@ class RestaurantSeeder extends Seeder
             'latitud' => 37.977323,
             'longitud' => -0.789799,
         ]);
+
+        DB::table('restaurants')->insert([
+            'name' => 'Casa Pili',
+            'photo' => 'restaurantimgs/casaPili.jpg',
+            'city' => 2,
+            'category' => 4,
+            'likes' => 0,
+            'phonenumber' => 693258741,
+            'description' => 'El Restaurante Casa Pili es un restaurante ideal para disfrutar de lo mejor de la cocina mediterránea, tradicional y de
+            mercado, situado en el centro de Los Montesinos, en Alicante.',
+            'latitud' => 38.027649,
+            'longitud' => -0.746982,
+        ]);
+
+        DB::table('restaurants')->insert([
+            'name' => 'Friends',
+            'photo' => 'restaurantimgs/friends.jpg',
+            'city' => 2,
+            'category' => 1,
+            'likes' => 0,
+            'phonenumber' => 789456123,
+            'description' => 'Bar Inglés muy acogedor con platos caseros, abierto todos los días de 11:00 hasta las 23:45, con varios eventos y
+            conciertos en vivo.',
+            'latitud' => 38.027877,
+            'longitud' => -0.745852,
+        ]);
     }
 }
