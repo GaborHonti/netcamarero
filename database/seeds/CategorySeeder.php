@@ -15,5 +15,17 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'Pub Inglés'
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Comida Árabe'
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Comida Mexicana'
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Pub/Restaurante Español'
+        ]);
     }
 }
