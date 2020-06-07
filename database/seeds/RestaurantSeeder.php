@@ -80,6 +80,18 @@ class RestaurantSeeder extends Seeder
         ]);
 
         DB::table('restaurants')->insert([
+            'name' => 'Casa Antonio',
+            'photo' => 'restaurantimgs/casaantonio.jpg',
+            'city' => 1,
+            'category' => 5,
+            'likes' => 0,
+            'phonenumber' => 693258741,
+            'description' => 'Pizzas Tradicionales, abierto los fines de semana, no dudes en visitarnos!',
+            'latitud' => 37.976522,
+            'longitud' =>  -0.788874,
+        ]);
+
+        DB::table('restaurants')->insert([
             'name' => 'Friends',
             'photo' => 'restaurantimgs/friends.jpg',
             'city' => 2,
