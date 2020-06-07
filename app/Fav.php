@@ -8,7 +8,7 @@ class Fav extends Model
 {
     protected $fillable = ['user', 'restaurant'];
 
-    protected $primaryKey = 'user';
+    //protected $primaryKey = 'user';
 
     public function restaurantObject()
     {
